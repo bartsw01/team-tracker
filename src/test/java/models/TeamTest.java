@@ -47,7 +47,7 @@ public class TeamTest {
     public void AllTeamsContainsAllTeams_true() throws Exception {
         Team team = setupNewTeam();
         Team otherTeam = setupNewTeam();
-        assertTrue(Team.getAll().contains(teams));
+        assertTrue(Team.getAll().contains(team));
         assertTrue(Team.getAll().contains(otherTeam));
     }
 
