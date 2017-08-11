@@ -33,7 +33,7 @@ public class TeamTest {
     @Test
     public void TeamInstantiatesWithContent_true() throws Exception {
         Team Team = setupNewTeam();
-        assertEquals("Team Programmers", Team.getTeamName());
+        assertEquals("Team Programics", Team.getTeamName());
     }
 
     public Team setupNewTeam() {return new Team("Team Programics", "Jon Jones", "Meagan O'Neil", "Mikey McMike",
