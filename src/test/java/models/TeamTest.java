@@ -19,4 +19,7 @@ public class TeamTest {
     @Test
     public void name() throws Exception {
     }
+
+    public Team setupNewTeam() {return new Team("Team Programics", "Jon Jones", "Meagan O'Neil", "Mikey McMike",
+            "Anastasia Romanoff");}
 }
