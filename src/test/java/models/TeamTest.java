@@ -19,7 +19,7 @@ public class TeamTest {
     @Test
     public void NewTeamObjectGetsCorrectlyCreated_true() throws Exception {
         Team team = setupNewTeam();
-        assertEquals(false, team instanceof Team);
+        assertEquals(true, team instanceof Team);
     }
 
     public Team setupNewTeam() {return new Team("Team Programics", "Jon Jones", "Meagan O'Neil", "Mikey McMike",
