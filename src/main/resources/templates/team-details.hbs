@@ -1,0 +1,18 @@
+{{#partial "content"}}
+    <div class="well">
+        <p>Team:</p>
+        <ul>
+            <li>{{Team.title}}</li>
+            <li>{{Team.location}}</li>
+            <li>{{Team.employer}}</li>
+            <li>{{Team.description}}</li>
+            <li>{{Team.contact}}</li>
+            <li>{{Team.salary}}</li>
+            <li>Created At: {{Team.createdAt}}</li>
+            <p>
+                <a href="/teams/{{Team.id}}/update">Edit this Team</a>
+                <a href="/teams/{{Team.id}}/delete">DELETE this entry (cannot be undone)</a>
+            </p>
+            <div class="well">
+{{/partial}}
+{{> layout.hbs}}

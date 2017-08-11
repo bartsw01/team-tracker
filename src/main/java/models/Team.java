@@ -6,9 +6,6 @@ import java.util.ArrayList;
 public class Team {
     private static ArrayList<Team> allTeams = new ArrayList<>();
     private String teamName;
-
-
-
     private String teamDescription;
     private String teamMember1;
     private String teamMember2;
