@@ -43,6 +43,14 @@ public class TeamTest {
         assertEquals(2, Team.getAll().size());
     }
 
+    @Test
+    public void AllTeamsContainsAllTeams_true() throws Exception {
+        Team team = setupNewTeam();
+        Team otherTeam = setupNewTeam();
+        assertTrue(Team.getAll().contains(teams));
+        assertTrue(Team.getAll().contains(otherTeam));
+    }
+
     public Team setupNewTeam() {return new Team("Team Programics", "Jon Jones", "Meagan O'Neil", "Mikey McMike",
             "Anastasia Romanoff");}
 }
