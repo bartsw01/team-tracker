@@ -20,37 +20,53 @@ public class TeamTest {
 
     @Test
     public void NewTeamObjectGetsCorrectlyCreated_true() throws Exception {
-        Team team = setupNewTeam();
-        assertEquals(true, team instanceof Team);
+        Team sampleTeam = setupNewTeam();
+        assertEquals(true, sampleTeam instanceof Team);
     }
 
     @Test
     public void getCreatedAt_instantiatesWithCurrentTime_today() throws Exception {
-        Team team = setupNewTeam();
-        assertEquals(LocalDateTime.now().getDayOfWeek(), team.getCreatedAt().getDayOfWeek());
+        Team sampleTeam = setupNewTeam();
+        assertEquals(LocalDateTime.now().getDayOfWeek(), sampleTeam.getCreatedAt().getDayOfWeek());
     }
 
     @Test
     public void TeamInstantiatesWithContent_true() throws Exception {
-        Team Team = setupNewTeam();
-        assertEquals("Team Programics", Team.getTeamName());
+        Team sampleTeam = setupNewTeam();
+        assertEquals("Team Programics", sampleTeam.getTeamName());
     }
 
     @Test
     public void AllTeamsAreCorrectlyReturned_true() throws Exception {
-        Team team = setupNewTeam();
-        Team otherTeam = setupNewTeam();
+        Team sampleTeam = setupNewTeam();
+        Team otherSampleTeam = setupNewTeam();
         assertEquals(2, Team.getAll().size());
     }
 
     @Test
     public void AllTeamsContainsAllTeams_true() throws Exception {
-        Team team = setupNewTeam();
-        Team otherTeam = setupNewTeam();
-        assertTrue(Team.getAll().contains(team));
-        assertTrue(Team.getAll().contains(otherTeam));
+        Team sampleTeam = setupNewTeam();
+        Team otherSampleTeam = setupNewTeam();
+        assertTrue(Team.getAll().contains(sampleTeam));
+        assertTrue(Team.getAll().contains(otherSampleTeam));
     }
 
-    public Team setupNewTeam() {return new Team("Team Programics", "Jon Jones", "Meagan O'Neil", "Mikey McMike",
+    @Test
+    public void getId_TeamsInstantiateWithAnID_1() throws Exception {
+        Team sampleTeam = setupNewTeam();
+        assertEquals(1, sampleTeam.getId());
+    }
+
+    @Test
+    public void findReturnsCorrectTeamWhenMoreThanOneTeamExists()throws Exception {
+        Team sampleTeam = setupNewTeam();
+        Team otherSampleTeam = setupNewTeam();
+        assertEquals(3, Team.findById(otherSampleTeam.getId()).getId());
+    }
+
+    public Team setupNewTeam() {return new Team("Team Programics", "Eclectic Mix of Youthful Souls","Jon Jones",
+            "Meagan O'Neil",
+            "Mikey " +
+            "McMike",
             "Anastasia Romanoff");}
 }
