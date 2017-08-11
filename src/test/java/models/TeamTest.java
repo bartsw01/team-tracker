@@ -4,6 +4,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.time.LocalDateTime;
+
 import static org.junit.Assert.*;
 
 public class TeamTest {
@@ -20,6 +22,12 @@ public class TeamTest {
     public void NewTeamObjectGetsCorrectlyCreated_true() throws Exception {
         Team team = setupNewTeam();
         assertEquals(true, team instanceof Team);
+    }
+
+    @Test
+    public void getCreatedAt_instantiatesWithCurrentTime_today() throws Exception {
+        Team team = setupNewTeam();
+        assertEquals(LocalDateTime.now().getDayOfWeek(), team.getCreatedAt().getDayOfMonth());
     }
 
     public Team setupNewTeam() {return new Team("Team Programics", "Jon Jones", "Meagan O'Neil", "Mikey McMike",
