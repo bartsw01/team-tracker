@@ -61,7 +61,7 @@ public class TeamTest {
     public void findReturnsCorrectTeamWhenMoreThanOneTeamExists()throws Exception {
         Team sampleTeam = setupNewTeam();
         Team otherSampleTeam = setupNewTeam();
-        assertEquals(3, Team.findById(otherSampleTeam.getId()).getId());
+        assertEquals(1, Team.findById(otherSampleTeam.getId()).getId());
     }
 
     public Team setupNewTeam() {return new Team("Team Programics", "Eclectic Mix of Youthful Souls","Jon Jones",
