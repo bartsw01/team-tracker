@@ -28,12 +28,16 @@ public class Team {
         this.addedTeam = false;
     }
 
-    public static ArrayList<Team> getAllTeams() {
+    public static ArrayList<Team> getAll() {
         return allTeams;
     }
 
     public static void setAllTeams(ArrayList<Team> allTeams) {
         Team.allTeams = allTeams;
+    }
+
+    public static void clearAllTeams(){
+        allTeams.clear();
     }
 
     public String getTeamName() {
