@@ -36,6 +36,13 @@ public class TeamTest {
         assertEquals("Team Programics", Team.getTeamName());
     }
 
+    @Test
+    public void AllTeamsAreCorrectlyReturned_true() throws Exception {
+        Team team = setupNewTeam();
+        Team otherTeam = setupNewTeam();
+        assertEquals(1, Team.getAll().size());
+    }
+
     public Team setupNewTeam() {return new Team("Team Programics", "Jon Jones", "Meagan O'Neil", "Mikey McMike",
             "Anastasia Romanoff");}
 }
