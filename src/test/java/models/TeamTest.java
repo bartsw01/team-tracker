@@ -27,7 +27,7 @@ public class TeamTest {
     @Test
     public void getCreatedAt_instantiatesWithCurrentTime_today() throws Exception {
         Team team = setupNewTeam();
-        assertEquals(LocalDateTime.now().getDayOfWeek(), team.getCreatedAt().getDayOfMonth());
+        assertEquals(LocalDateTime.now().getDayOfWeek(), team.getCreatedAt().getDayOfWeek());
     }
 
     public Team setupNewTeam() {return new Team("Team Programics", "Jon Jones", "Meagan O'Neil", "Mikey McMike",
