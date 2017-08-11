@@ -40,7 +40,7 @@ public class TeamTest {
     public void AllTeamsAreCorrectlyReturned_true() throws Exception {
         Team team = setupNewTeam();
         Team otherTeam = setupNewTeam();
-        assertEquals(1, Team.getAll().size());
+        assertEquals(2, Team.getAll().size());
     }
 
     public Team setupNewTeam() {return new Team("Team Programics", "Jon Jones", "Meagan O'Neil", "Mikey McMike",
