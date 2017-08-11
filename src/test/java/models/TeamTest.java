@@ -30,6 +30,12 @@ public class TeamTest {
         assertEquals(LocalDateTime.now().getDayOfWeek(), team.getCreatedAt().getDayOfWeek());
     }
 
+    @Test
+    public void TeamInstantiatesWithContent_true() throws Exception {
+        Team Team = setupNewTeam();
+        assertEquals("Team Programmers", Team.getTeamName());
+    }
+
     public Team setupNewTeam() {return new Team("Team Programics", "Jon Jones", "Meagan O'Neil", "Mikey McMike",
             "Anastasia Romanoff");}
 }
